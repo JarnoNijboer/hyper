@@ -150,7 +150,7 @@ app.on('ready', () => installDevExtensions(isDev).then(() => {
       backgroundColor: toElectronBackgroundColor(cfg.backgroundColor || '#000'),
       // we want to go frameless on windows and linux
       frame: process.platform === 'darwin',
-      transparent: process.platform === 'darwin',
+      transparent: ['win32', 'darwin'].includes(process.platform),
       icon: resolve(__dirname, 'static/icon.png'),
       // we only want to show when the prompt is ready for user input
       // HYPERTERM_DEBUG for backwards compatibility with hyperterm
