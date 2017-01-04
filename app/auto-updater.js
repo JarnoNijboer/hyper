@@ -31,6 +31,7 @@ function init() {
 }
 
 module.exports = function (win) {
+  return; // we don't need auto-updates
   if (!isInit) {
     init();
   }
