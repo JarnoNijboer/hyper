@@ -21,6 +21,12 @@ module.exports = {
     // border color (window, tabs)
     borderColor: '#333',
 
+    // set to 'true' if you want specify a transparent background
+    // be aware of the caveats of transparent electron windows
+    // https://github.com/electron/electron/blob/master/docs/api/frameless-window.md#limitations
+    // default: `false` on windows and Linux, (ignored on macOS)
+    transparency: false,
+
     // custom css to embed in the main window
     css: '',
 
